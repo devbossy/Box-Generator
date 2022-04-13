@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box generator</title>
+    <link rel="stylesheet" href="src/icon/boxicons/css/devbossy.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">Devbossy</a>
+        <ul class="nav-links">
+            <li><a href="https://www.github.com/devbossy/"><i class="bx bxl-github"></i></a></li>
+            <li><a href="https://www.facebook.com/NekenaRB/"><i class="bx bxl-facebook-circle"></i></a></li>
+        </ul>
+    </nav>
+    <section class="box-generator">
+        <header>
+            <h1>Box generator</h1>
+        </header>
+        <div class="wrapper">
+        </div>
+        <div class="tools">
+            <header>
+                <h1>Tools</h1>
+            </header>
+            <hr>
+            <div class="container">
+                <div class="layout border active">
+                    <header onclick="toggleLayout(this)">
+                        <h3 class="title">Border & Radius</h3>
+                        <span class="bx bx-chevron-down" id="toggleLayout"></span>
+                    </header>
+                    <div class="content border">
+                        <h4>Border</h4><br>
+                        <div>
+                            <div class="tools-div">
+                                <label for="" class="tools-label">Width</label>
+                                <input type="number" class="tools-put" value="0">
+                            </div>
+                            <div class="tools-div">
+                                <label for="" class="tools-label">Style</label>
+                                <select class="tools-put border-style">
+                                </select>
+                            </div>
+                            <div class="tools-div">
+                                <label for="" class="tools-label">Color</label>
+                                <input type="color" class="tools-put">
+                            </div>
+                        </div>
+                        <hr>
+                        <h4>Border Radius</h4><br>
+                        <div>
+                            <div>
+                                <div class="tools-div">
+                                    <label for="" class="tools-label">LT</label>
+                                    <input type="range" class="tools-put" min="0" max="200" step="1" value="0">
+                                </div>
+                                <div class="tools-div">
+                                    <label for="" class="tools-label">LB</label>
+                                    <input type="range" class="tools-put" min="0" max="200" step="1" value="0">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tools-div">
+                                    <label for="" class="tools-label">RT</label>
+                                    <input type="range" class="tools-put" min="0" max="200" step="1" value="0">
+                                </div>
+                                <div class="tools-div">
+                                    <label for="" class="tools-label">RB</label>
+                                    <input type="range" class="tools-put" min="0" max="200" step="1" value="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layout shadow active">
+                    <header  onclick="toggleLayout(this)">
+                        <h3 class="title">Box Shadow</h3>
+                        <span class="bx bx-chevron-down" id="toggleLayout"></span>
+                    </header>
+                    <div class="content border">
+                        <div>
+                            <div class="tools-div">
+                                <label for="" class="tools-label">X offset</label>
+                                <input type="range" class="tools-put" min="0" max="50" step="1" value="0">
+                            </div>
+                            <div class="tools-div">
+                                <label for="" class="tools-label">Y offset</label>
+                                <input type="range" class="tools-put" min="0" max="50" step="1" value="0">
+                            </div>
+                            <div class="tools-div">
+                                <label for="" class="tools-label">blur</label>
+                                <input type="range" class="tools-put" min="0" max="50" step="1" value="0">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tools-div">
+                                <label for="" class="tools-label">spread</label>
+                                <input type="range" class="tools-put" min="0" max="50" step="1" value="0">
+                            </div>
+                            <div class="tools-div">
+                                <label for="" class="tools-label">opacity</label>
+                                <input type="range" class="tools-put shadowOpacity" min="0" max="0.99" step="0.01" value="0.99">
+                            </div>
+                            <div class="tools-div check">
+                                <label for="" class="tools-label">inset</label>
+                                <input type="checkbox" value="" class="tools-put shadowCheck">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tools-div">
+                                <label for="" class="tools-label">Color</label>
+                                <input type="color" class="tools-put">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layout active">
+                    <header  onclick="toggleLayout(this)">
+                        <h3 class="title">Code</h3>
+                        <span class="bx bx-chevron-down" id="toggleLayout"></span>
+                    </header>
+                    <div class="content result-code">
+                        <div>
+                            <span onclick="RefrechCode()" class="code-btn" id="code-btn"><i class="bx bx-refresh"></i>Refrech</span>
+                            <span class="bx bx-copy copyBtn" id="code-btn"></span>
+                        </div>
+                        <div>
+                            <div class="code-result">
+                                <p class="copied">Copied</p>
+                                <span class="code">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/cool.js"></script>
+</body>
+</html>
